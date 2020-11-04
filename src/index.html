@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UEFA Champions League</title>
+	<link rel="stylesheet" href="projectstyle.css">
+</head>
+<body>
+<h1><img src="../images/logo.png" style="float:left;width:100px;height:100px;">Champions League 2019-2020 - A Review</h1><br><br><br>
+
+<div class="nav">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="teams.html">Teams</a></li>
+	<li><a>Fixtures and Results</a>
+		<ul>
+			<li><a href="group.html">Group Stage</a></li>
+			<li><a href="knockout.html">Knockouts</a></li>
+		</ul>
+	</li>
+	<li><a href="standings.html">Standings</a></li>
+	<li><a href="stats.html">Stats</a></li>
+</ul>
+</div>
+<br><br><br><br><br><br><br>
+<h1 style="font-size:70px;">Welcome</h1><br><br>
+
+<div class="carousel-container">
+	<div class="mySlides fade">
+		<img src="../images/champ8.jpg" style="width:100%">
+	  </div>
+	  
+	<div class="mySlides fade">
+		<img src="../images/champ2.jpg" style="width:100%">
+	</div>
+	  
+	<div class="mySlides fade">
+		<img src="../images/champ3.jpeg" style="width:100%">
+	</div>
+	<div class="mySlides fade">
+		<img src="../images/champ4.jpg" style="width:100%">
+	</div>
+	<div class="mySlides fade">
+		<img src="../images/champ7.jpg" style="width:100%">
+	</div>
+	<div class="mySlides fade">
+		<img src="../images/champ6.jpg" style="width:100%">
+	</div>
+	<div class="mySlides fade">
+		<img src="../images/champ9.jpeg" style="width:100%">
+	</div>
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span> 
+	<span class="dot" onclick="currentSlide(2)"></span> 
+	<span class="dot" onclick="currentSlide(3)"></span> 
+	<span class="dot" onclick="currentSlide(4)"></span>
+	<span class="dot" onclick="currentSlide(5)"></span>
+	<span class="dot" onclick="currentSlide(6)"></span>
+	<span class="dot" onclick="currentSlide(7)"></span>
+</div>
+<br><br>
+
+<div class="map">
+<h3 style="font-size:30px;">The 16 teams that qualified for the knockout stages<h3>
+	<iframe src="https://www.google.com.qa/maps/d/u/1/embed?mid=1ymSiY-vsr0J-IXkCxGgUlAZHqM_Sc714" width="640" height="480"></iframe>
+</div>
+<br><br><br>
+<div class="footer">
+  <h2>About Us</h2>
+  <p>Done By S.Karthikeyan CEG IT First Year.</p>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+	  slideIndex = 1
+	}    
+  if (n < 1) {
+	  slideIndex = slides.length
+	}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
